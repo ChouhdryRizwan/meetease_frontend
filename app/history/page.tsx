@@ -74,7 +74,7 @@ export default function HistoryPage() {
   const fetchMeetings = async () => {
     try {
       const token = localStorage.getItem("token")
-      const response = await fetch("${API_BASE_URL}/api/meetings?limit=100", {
+      const response = await fetch(`${API_BASE_URL}/api/meetings?limit=100`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

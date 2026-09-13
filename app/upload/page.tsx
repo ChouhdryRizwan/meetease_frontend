@@ -295,7 +295,7 @@ export default function UploadPage() {
 
       const token = localStorage.getItem("token")
 
-      const response = await fetch("${API_BASE_URL}/api/upload", {
+      const response = await fetch(`${API_BASE_URL}/api/upload`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,

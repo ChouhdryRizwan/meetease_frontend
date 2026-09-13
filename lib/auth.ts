@@ -22,7 +22,7 @@ export class AuthService {
 
   async login(email: string, password: string): Promise<{ success: boolean; user?: User; error?: string }> {
     try {
-      const response = await fetch("${API_BASE_URL}/api/auth/login", {
+      const response = await fetch(`${API_BASE_URL}/api/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -51,7 +51,7 @@ export class AuthService {
     password: string,
   ): Promise<{ success: boolean; user?: User; error?: string }> {
     try {
-      const response = await fetch("${API_BASE_URL}/api/auth/signup", {
+      const response = await fetch(`${API_BASE_URL}/api/auth/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

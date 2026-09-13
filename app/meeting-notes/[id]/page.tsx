@@ -226,14 +226,14 @@ export default function MeetingNotesPage({ params }: { params: { id: string } })
       if (!token) return false
 
       // Check if token is still valid
-      const validateResponse = await fetch("${API_BASE_URL}/api/auth/validate", {
+      const validateResponse = await fetch(`${API_BASE_URL}/api/auth/validate`, {
         headers: { Authorization: `Bearer ${token}` },
       })
 
       if (validateResponse.ok) return true
 
       // Try to refresh token
-      const refreshResponse = await fetch("${API_BASE_URL}/api/auth/refresh", {
+      const refreshResponse = await fetch(`${API_BASE_URL}/api/auth/refresh`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
       })

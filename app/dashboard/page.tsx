@@ -71,7 +71,7 @@ export default function DashboardPage() {
       const token = localStorage.getItem("token")
 
       // Fetch meetings
-      const meetingsResponse = await fetch("${API_BASE_URL}/api/meetings?limit=10000000", {
+      const meetingsResponse = await fetch(`${API_BASE_URL}/api/meetings?limit=10000000`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
